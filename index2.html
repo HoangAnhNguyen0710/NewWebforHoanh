@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="3.css">
+</head>
+
+<body>
+    <div class="box1">
+        <h1 style="text-align: center;"><span style="color: chocolate">Hoanh's Blog</span></h1>
+        <!-- <b><p style="color: blue;">Choose an option :</p></b> -->
+    </div>
+    <style>
+        span.a1 {
+            margin-left: auto;
+            margin-right: 20px;
+        }
+    </style>
+    <div class="box">
+        <ul>
+            <li>
+                <a href="index.html" title="Hoanh's Profile" target="_blank">Main page </a>
+            </li>
+            <li>
+                <a href="index1.html" title="Hoanh's Code" target="_blank">My Code</a>
+            </li>
+            <li>
+                <a href="index4.html" title="Hoanh's GirlFriend">My Playlist</a>
+            </li>
+            <span class="a1" style="color: aliceblue">Contact : +84916313317 / Facebook: <a href="https://www.facebook.com/profile.php?id=100011659904187">Hoang Anh Nguyen</a></span>
+        </ul>
+
+    </div>
+    <div>
+        <b><span style="color :rgb(231, 46, 21)" ><img id="slider" width="50%" height="auto" src="" alt="Warning ! Cơm Tró Alert "></p></span></b>
+        <button class="click1" type="button" onclick="MyLove()">Click here to see Hoanh and his girl friend</button>
+        <div>
+
+            <button class="click1" onclick="prev()"> Ảnh trước </button>
+            <button class="click1" onclick="next()"> Ảnh sau </button>
+        </div>
+    </div>
+    <script>
+        var images = [
+            "1.JPG",
+            "2.JPG",
+            "b..jpeg"
+        ];
+        var num = 0;
+
+        function MyLove() {
+            var anh = document.getElementById("slider");
+            slider.src = images[0];
+        }
+
+        function next() {
+            var slider = document.getElementById("slider");
+            num++;
+            if (num >= images.length) {
+                num = 0;
+            }
+            slider.src = images[num];
+        }
+
+        function prev() {
+            var slider = document.getElementById("slider");
+            num--;
+            if (num < 0) {
+                num = images.length - 1;
+            }
+            slider.src = images[num];
+        }
+    </script>>
+
+
+</body>
+
+</html>
